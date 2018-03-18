@@ -21,6 +21,9 @@ cloudflare_api_file=".cloudflare-api"
 cloudflare_email=$(cat "$cloudflare_email_file")
 cloudflare_api_key=$(cat "$cloudflare_api_file")
 
+# BUILT ALL FILES
+gulp default
+
 # UPLOAD ALL FILES TO S3
 for file in $files
 do
