@@ -1,0 +1,54 @@
+<script>
+      // use plugins and options as needed, for options, detail see
+      // http://i18next.com/docs/
+      i18next.init({
+        lng: 'en', // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
+        resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
+          fr: {
+            translation: {
+              nav: {
+                discover: 'Découvrir',
+                be_code: 'BeCode',
+                challenge: 'Défi',
+                support: 'Soutenir',
+                contact: 'Contact'
+              },
+              header: {
+                title: '60km autour de Bruxelles',
+                subtitle: 'Pour BeCode et des opportunités égales d\'éducation',
+                cta: 'Découvrir'
+              }
+            }
+          },
+          en: {
+            translation: {
+              nav: {
+                discover: 'Challenge',
+                be_code: 'BeCode',
+                challenge: 'Fundraising',
+                support: 'Support',
+                faq: 'FAQ',
+                team: 'Team',
+                contact: 'Contact',
+                blog: 'Blog'
+              },
+              header: {
+                title: '60km run around Brussels',
+                subtitle: 'Supporting BeCode for equal tech education opportunities, with a crypto-currencies fundraising',
+                cta: 'Discover'
+              }
+            }
+          }
+        }
+      }, function(err, t) {
+
+        jqueryI18next.init(i18next, $);
+        $('#page-top').localize();
+
+        $('#cta').click(function() {
+          i18next.changeLanguage('fr', function() {
+            $('#page-top').localize();
+          });
+        });
+      });
+    </script>
