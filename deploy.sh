@@ -6,26 +6,32 @@
 # - have retrieved your Cloudflare API key and email and stored them in files
 # - have retrieved your Cloudflare resource id for the site to deploy
 
+# FILES & FOLDERS TO UPLOAD
+files="index.html"
+folders="css img js vendor"
+
 # AWS SETTINGS
 aws_target_bucket="cryptorun.brussels"
 aws_profile="cryptorun"
 
 # CLOUDFLARE SETTINGS
-cloudflare_resource_id="20eb2085910d16b077e7c6d525c569c6"
+cloudflare_resource_id="33fe4b817e1379f706da7480302fe99a"
 cloudflare_email_file=".cloudflare-email"
 cloudflare_api_file=".cloudflare-api"
 cloudflare_email=$(cat "$cloudflare_email_file")
 cloudflare_api_key=$(cat "$cloudflare_api_file")
 
-# BUILD ALL FILES
-npm run build
+# UPLOAD ALL FILES TO S3
+for file in $files
+do
+  aws s3 cp $file s3://$aws_target_bucket/$file --profile $aws_profile --acl public-read
+done
 
-# UPLOAD ALL BUILT SITE FILES TO S3
-aws s3 cp dist/ s3://$aws_target_bucket/dist --recursive --profile $aws_profile --acl public-read
-aws s3 cp index.html s3://$aws_target_bucket/index.html --profile $aws_profile --acl public-read
-aws s3 cp favicon.png s3://$aws_target_bucket/favicon.png --profile $aws_profile --acl public-read
-aws s3 cp social.png s3://$aws_target_bucket/social.png --profile $aws_profile --acl public-read
-aws s3 cp src/assets/thumbnails/ s3://$aws_target_bucket/assets --recursive --profile $aws_profile --acl public-read
+# UPLOAD ALL FOLDERS TO S3 (note the recursive upload flag)
+for folder in $folders
+do
+  aws s3 cp $folder/ s3://$aws_target_bucket/$folder --recursive --profile $aws_profile --acl public-read
+done
 
 # PURGE EVERYTHING ON CLOUDFLARE CDN TO RELOAD NEW FILES VERSIONS
 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$cloudflare_resource_id/purge_cache" \
