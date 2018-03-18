@@ -7,7 +7,7 @@
 # - have retrieved your Cloudflare resource id for the site to deploy
 
 # FILES & FOLDERS TO UPLOAD
-files="index.html favicon.png"
+files="index.html favicon.png social.png"
 folders="css img js vendor"
 
 # AWS SETTINGS
