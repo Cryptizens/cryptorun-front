@@ -6,23 +6,104 @@
         resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
           fr: {
             translation: {
-              nav: {
-                discover: 'Découvrir',
+              navbar: {
+                discover: 'Challenge',
                 be_code: 'BeCode',
-                challenge: 'Défi',
+                challenge: 'Collecte',
                 support: 'Soutenir',
-                contact: 'Contact'
+                faq: 'FAQ',
+                team: 'Team',
+                contact: 'Contact',
+                press: 'Presse',
+                blog: 'Blog'
               },
               header: {
                 title: '60km autour de Bruxelles',
-                subtitle: 'Pour BeCode et des opportunités égales d\'éducation',
+                subtitle: 'Pour BeCode et plus d\'opportunités d\'éducation tech, avec une collecte de fonds en crypto-monnaie',
                 cta: 'Découvrir'
+              },
+              flash: {
+                text: "Le smart contract est actuellement en phase de test, <u><a style='font-weight: bold; color: white;' target='_blank' href='https://github.com/thomasvds/cryptorun-back'>découvrez-le ici</a></u>! La collecte démarrera autour du 15 avril"
+              },
+              discover: {
+                title: "Un <span class='highlighted'>challenge</span> excitant",
+                subtitle: "Relever le défi pour supporter BeCode",
+                item_1: {
+                  title: "Le défi: un ultrarun de 60KM autour de Bruxelles",
+                  description: "Le 19 mai, Thomas Vanderstraeten courra un peu plus de 60km d'une traite autour de Bruxelles, avec une collecte de fonds pour l'asbl BeCode"
+                },
+                item_2: {
+                  title: "L'objectif: supporter l'asbl BeCode",
+                  description: "BeCode est une association qui offre une éducation gratuite à la programmation, pour que tous puissent prospérer dans la technologie quel que soit leur background"
+                },
+                item_3: {
+                  title: "L'arme secrète: une collecte de fonds en crypto-monnaies",
+                  description: "La collecte de fonds utilise à fond la nouvelle technologie Blockchain pour collecter les fonds et libérer ceux-ci: le GPS de Thomas sera connecté à la Blockchain !"
+                }
+              },
+              cause: {
+                title: "Un défi au profit d'une <span class='highlighted'>cause inspirante</span>",
+                subtitle: "Découvrez BeCode, l'association qui prépare la nouvelle génération de talent tech",
+                close: "<i class='fa fa-times'></i> Close",
+                item_1: {
+                  title: "Un besoin pressant de talent tech dans l'industrie",
+                  subtitle: "Le besoin de talents tech",
+                  description: "On s'attend à une pénurie d'environ 30 000 travailleurs en Belgique en 2020 à cause du manque de travailleurs e-qualifiés. 70% des employeurs pointent le manque de formations comme principale raison de cette pénurie."
+                },
+                item_2: {
+                  title: "Peu d'opportunités pour apprendre la tech en Belgique",
+                  subtitle: "L'éducation tech en Belgique",
+                  description: "Bien qu'un grand nombre de jobs dans le digital soient encore vacants - et ce nombre est appelé à augmenter - la plupart de ces professions ne requièrent pas de diplôme spécifique. Avec un esprit logique, beaucoup de motivation et une formation de base, n'importe qui est en mesure de créer des applications mobiles et des sites web, puis d'en faire sa profession ! Malheureusement, aucune structure n'existe actuellement à grande échelle pour enseigner ces compétences. C'est un gâchis, car 23% des jeunes Belges sont actuellement au chômage."
+                },
+                item_3: {
+                  title: "BeCode turbocharge l'éducation tech pour tous",
+                  subtitle: "BeCode change les choses",
+                  description: "BeCode propose des formations de coding compétitives et responsables, acccessibles à toutes et tous. La formation prodigue du soutien individuel pour décrocher un emploi stable. Après avoir lancé son premier centre de formation à Bruxelles avec plus de 100 personnes en formation continuelle et ouvert une antenne à Charleroi, BeCode s'apprête à s'étendre à l'ensemble du pays en travaillant avec les partenaires locaux (publics et privés) aux côtés des futurs étudiants et employeurs !"
+                }
+              },
+              challenge: {
+                title: "Une collecte de fonds sur la <span class='highlighted'>blockchain</span>",
+                subtitle: "Parce que supporter la tech, c'est mieux avec la tech",
+                item_1: {
+                  title: "Le sponsoring est réalisé en crypto-monnaies",
+                  subtitle: "Les fonds sont collectés en Ether",
+                  description: "Comme pour une collecte de fonds traditionnelle, des fonds seront collectés pour BeCode en échange du challenge sportif de Thomas. L'élément intéressant est que ces fonds sont collectés en <a href='https://en.wikipedia.org/wiki/Ethereum'>Ether</a>, une crypto-monnaie similaire au <a href='https://en.wikipedia.org/wiki/Bitcoin'>Bitcoin</a>"
+                },
+                item_2: {
+                  title: "Les fonds sont visibles par tous, mais bien à l'abri",
+                  subtitle: "Un smart contract se charge de la sécurité",
+                  description: "Sur le réseau Ethereum où ils sont stockés, les fonds sont consultables par tous. Leur sécurité est assurée par une application Blockchain appelée <a href='https://en.wikipedia.org/wiki/Smart_contract'>smart contract</a>: une sorte de contrat qui s'assure tout seul que ses clauses soient bien respectées"
+                },
+                item_3: {
+                  title: "Une seule manière de libérer les fonds",
+                  subtitle: "La clé: courir 60km",
+                  description: "Les fonds collectés seront transmis à BeCode seulement si Thomas court 60km et l'enregistre sur l'application <a href='https://www.strava.com/'>Strava</a>, à laquelle le smart contract est connecté. Autrement, les donateurs pourront récupérer leurs fonds."
+                },
+                item_4: {
+                  title: "Le défi est pour bientôt...",
+                  subtitle: "Save the date: 19/05/2018",
+                  description: "Le départ s'approche! Suivez toutes les préparations sur le <a target='_blank' href='https://medium.com/@vanderstraeten.thomas'>blog</a> de Thomas et la <a target='_blank' href='https://www.facebook.com/becode.org/'>page Facebook</a> de BeCode !"
+                }
+              },
+              support: {
+                item_1: {
+                  cta: "Partagez sur Facebook",
+                  description: "L'objectif principal de ce challenge est de faire parler de BeCode, afin que de plus en plus d'étudiants puissent bénéficier d'une formation tech gratuite. Peut-être que votre partage motivera de nouveaux étudiants !"
+                },
+                item_2: {
+                  cta: "Faites une donation en ETH",
+                  description: "Plongez dans cette technologie excitante et effectuez votre première transaction en crypto-monnaie. Quoi de mieux qu'une asbl tech pour cela ?"
+                },
+                item_3: {
+                  cta: "Courez avec Thomas",
+                  description: "60km, c'est une sacrée distance, et le bonheur est bien meilleur lorsqu'il est partagé. Sautez dans vos chaussures de running et choississez votre distance: 5, 10, 20km...il y en a pour tous les goûts !"
+                }
               }
             }
           },
           en: {
             translation: {
-              nav: {
+              navbar: {
                 discover: 'Challenge',
                 be_code: 'BeCode',
                 challenge: 'Fundraising',
@@ -37,19 +118,109 @@
                 title: '60km run around Brussels',
                 subtitle: 'Supporting BeCode for equal tech education opportunities, with a crypto-currencies fundraising',
                 cta: 'Discover'
+              },
+              flash: {
+                text: "The Ethereum Smart contract is currently in test phase, <u><a style='font-weight: bold; color: white;' target='_blank' href='https://github.com/thomasvds/cryptorun-back'>discover it here</a></u>! Fundraising start expected around April 15th"
+              },
+              discover: {
+                title: "An exciting <span class='highlighted'>challenge</span>",
+                subtitle: "To raise awareness for the challenges faced by others",
+                item_1: {
+                  title: "A sponsored ultra-run around the Belgian capital",
+                  description: "On May 19th, Thomas Vanderstraeten will run a bit more than 60km along Brussels' Green Belt in one go, in a bid to attract interest on BeCode"
+                },
+                item_2: {
+                  title: "Raising awareness and funds for BeCode",
+                  description: "BeCode is a novel Belgian nonprofit providing free tech education to all, so that tomorrow's tech talents can blossom regardless of their background"
+                },
+                item_3: {
+                  title: "Running the fundraiser on Blockchain",
+                  description: "The fundraising will leverage new technology in an exciting way, using crypto-currencies and smart contracts to gather and free up the funds"
+                }
+              },
+              cause: {
+                title: "Supporting a <span class='highlighted'>great cause</span>",
+                subtitle: "Discover BeCode, enabling tomorrow's digital talent to blossom",
+                close: "<i class='fa fa-times'></i> Close",
+                item_1: {
+                  title: "A pressing need of tech talent in the industry",
+                  subtitle: "The need for tech talent",
+                  description: "It is expected that there will be about 30.000 vacancies in Belgium by 2020 due to shortfall of e-skilled workers. 70% of employers blame inadequate training for the shortfall in skilled workers."
+                },
+                item_2: {
+                  title: "Scarce opportunities for tech education in Belgium",
+                  subtitle: "Tech education in Belgium",
+                  description: "Whereas a large amount of digital job vacancies remain unfilled - and that number will increase dramatically in the years to come - most of these professions don't require an engineering degree at all. With a logical mindset, a lot of motivation and some basic training, anyone can learn to create mobile applications and websites and turn that into a profession! However, no mainstream educational structures exist to teach these skills en masse. This is a pity, as 23% of Belgian youth are currently unemployed."
+                },
+                item_3: {
+                  title: "BeCode turbocharges tech education for all",
+                  subtitle: "How BeCode bridges the gap",
+                  description: "BeCode aims at providing competitive and responsible coding school programs, accessible to all. The program provides individual support for securing a sustainable profession. After launching its first center in Brussels with more than 100 people continuously in training and a first branch in Charleroi, BeCode is looking to open up all over the country, partnering with local stakeholders (private and public) working alongside future students and employers!"
+                }
+              },
+              challenge: {
+                title: "A <span class='highlighted'>crypto-currency</span> fundraising",
+                subtitle: "Because supporting tech is better with tech",
+                item_1: {
+                  title: "Sponsoring is done by sending crypto-coins",
+                  subtitle: "Funds are collected in Ether",
+                  description: "Like in a traditional fundraising, funds will be collected for BeCode in exchange for Thomas' sporting feat. The exciting stuff is that these funds will be collected in <a href='https://en.wikipedia.org/wiki/Ethereum'>Ether</a>, a crypto-currency similar to <a href='https://en.wikipedia.org/wiki/Bitcoin'>Bitcoin</a>"
+                },
+                item_2: {
+                  title: "Funds are publicly visible but safely locked",
+                  subtitle: "Secured in a smart contract",
+                  description: "On the Ethereum network where they are stored, the funds can be safely consulted by all. It's just like a public ledger. The funds are locked in a snippet of code that is called a <a href='https://en.wikipedia.org/wiki/Smart_contract'>smart contract</a>: a kind of contract that is responsible for its own execution"
+                },
+                item_3: {
+                  title: "Only one key to release the funds to BeCode",
+                  subtitle: "The trigger: running 60km",
+                  description: "The funds will be wired to BeCode only if Thomas records a 60km run through the <a href='https://www.strava.com/'>Strava</a> running application, to which the smart contract is connected. Otherwise, the donors will get back their funds"
+                },
+                item_4: {
+                  title: "The challenge is coming soon...",
+                  subtitle: "Save the date: 19/05/2018",
+                  description: "It's not long before the start is given! You can follow all the preparation on the <a target='_blank' href='https://medium.com/@vanderstraeten.thomas'>blog</a> of Thomas and the <a target='_blank' href='https://www.facebook.com/becode.org/'>Facebook page</a> of BeCode!"
+                }
+              },
+              support: {
+                item_1: {
+                  cta: "Share the BeCode love",
+                  description: "The primary goal of this challenge is to spread the word on the existence of BeCode, so that more and more students can join and benefit from free tech education. Maybe your share will motivate someone to join!"
+                },
+                item_2: {
+                  cta: "Donate ETH",
+                  description: "Dive deep into an exciting new technology and perform your first crypto-currency transfer to the smart contract. What better recipient than a tech non-profit for this?"
+                },
+                item_3: {
+                  cta: "Run with Thomas",
+                  description: "60km is a long way to go, and happiness is best when it is shared. So, hop in your running shoes and join Thomas along the path to discover Brussels' best green areas. 1km, 5km, 10km...pick your game!"
+                }
               }
             }
           }
         }
       }, function(err, t) {
-
         jqueryI18next.init(i18next, $);
-        $('#page-top').localize();
 
-        $('#cta').click(function() {
-          i18next.changeLanguage('fr', function() {
-            $('#page-top').localize();
-          });
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+
+        var lang = getUrlParameter('lang');
+
+        i18next.changeLanguage(lang, function() {
+          $('#page-top').localize();
         });
       });
     </script>
